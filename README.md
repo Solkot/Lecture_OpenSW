@@ -236,7 +236,7 @@ else
       echo
       ans=0
       read -p "Do you want to get the average 'rating' of movies rated by users with 'age' between 20 and 29 and 'occupation' as 'programmer'?(y/n):" ans
-      0 #해당 문자열을 출력하고 사용자의 입력을 받습니다.
+      #해당 문자열을 출력하고 사용자의 입력을 받습니다.
       if [ ${ans} = 'y' ]; then
       #사용자가 y를 입력할 경우 ans에 저장하고 다음의 과정을 수행합니다.
          num=$(awk -F'|' '$2 >= 20 && $2 <= 29 && $4 == "programmer" {print $1}' "$user")
